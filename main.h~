@@ -1,0 +1,6 @@
+#ifndef _PRINT_F
+#define _PRINT_F
+#include <stdarg.h>
+int _printf(const char *format, ...);
+
+#endif
