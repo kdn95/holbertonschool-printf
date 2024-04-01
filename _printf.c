@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stddef.h>
+#include <string.h>
 /**
  * _printf - simple printf function
  * @format: format specifiers as char
@@ -21,7 +22,7 @@ while (*format != '\0')
 {
 if (*format != '%')
 {
-_putchar(*format);
+putchar(*format);
 i++;
 }
 else
@@ -36,18 +37,18 @@ i++;
 }
 else if (*format == 'c')
 {
-char c = (char)va_arg(input_list, int);
-_putchar(c);
+char ch = (char)va_arg(input_list, int);
+putchar(ch);
 i++;
 }
 else if (*format == 's')
 {
 char *str = va_arg(input_list, char *);
-size_t str_len = _strlen(str);
+size_t str_len = strlen(str);
 size_t j = 0;
 while (j < str_len)
 {
-_putchar(str[j]);
+putchar(str[j]);
 i++;
 j++;
 }
