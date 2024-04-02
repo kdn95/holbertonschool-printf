@@ -16,7 +16,7 @@ if (format[i] == '%')
 {
 for (j = 0; prf_list[j].oprt != NULL; j++)
 {
-if (format[i + 1] == f_list[j].sym[0])
+if (format[i + 1] == prf_list[j].oprt[0])
 {
 a_val = prf_list[j].f(arg_list);
 if (a_val == -1)
