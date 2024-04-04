@@ -1,0 +1,21 @@
+.TH Printf - Manual Page
+.SH NAME
+printf \- print formatted output
+.SH SYNOPSIS
+.B #include "main.h"
+.br
+.B #include <stdio.h>
+.br
+.B #include <stdlib.h>
+.br
+.B #include <stdarg.h>
+.br
+.I int _printf(const char *format, ...);
+.SH DESCRIPTION
+The
+.B _printf
+function formats and prints data to standard output (stdout) according to
+the specified format string (format). The format string is a text string
+containing conversion specifiers that indicate how the corresponding
+arguments should be formatted and displayed.
+.PP
