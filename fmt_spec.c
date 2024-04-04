@@ -46,23 +46,25 @@ return (1);
 
 int print_integer(va_list list)
 {
-int num = va_arg(list, int);
+int len;
+unsigned int num;
+int n = va_arg(list, int);
 int printed = 0;
 int divisor;
-if (num < 0)
-{
-_writechar('-');
-printed++;
-num = -num;
-}
 divisor = 1;
-while (num / divisor > 9)
+len = 0;
+if (n < 0)
 {
-divisor *= 10;
+len += _writechar('-');
+num = n * -1;
 }
+else
+num = n;
+while (num / divisor > 9)
+divisor *= 10;
 while (divisor != 0)
 {
-_writechar((num / divisor) + '0');
+len += _writechar((num / divisor) + '0');
 printed++;
 num %= divisor;
 divisor /= 10;
