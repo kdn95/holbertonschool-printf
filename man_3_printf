@@ -1,4 +1,4 @@
-.TH Printf - Manual Page
+.TH Printf Manual Page
 .SH NAME
 printf \- print formatted output
 .SH SYNOPSIS
@@ -19,3 +19,50 @@ the specified format string (format). The format string is a text string
 containing conversion specifiers that indicate how the corresponding
 arguments should be formatted and displayed.
 .PP
+Conversion specifiers are introduced by the character % and are followed
+by a format code that specifies the data type to be formatted.
+Some common format codes include:
+.PP
+%c: Formats and prints a single character.
+.br
+%s: Formats and prints a string of characters.
+.br
+%d: Formats and prints a signed decimal integer.
+.br
+%i: Formats and prints an unsigned decimal integer (equivalent to %d).
+.br
+%%: Formats and prints a single percent sign (\%).
+.SH OPTIONS
+In addition to the format specifiers, the
+.B _printf
+function also supports the following options:
+.PP
+-c: Suppresses the padding of characters with spaces.
+.br
+-s: Suppresses the padding of strings with spaces.
+.br
+-d, -i: Suppresses the printing of the sign for positive integers.
+.br
+-%: Suppresses the printing of the leading zero for octal and hexadecimal numbers.
+.SH RETURN VALUE
+This function returns the number of characters written, excluding the
+terminating null character (\"\\0") used to end the string. A negative
+value is returned if an error occurs.
+.SH ERRORS
+Failure of
+.B _printf
+function can result from:
+.PP
+Invalid format for the string.
+.br
+The argument has an incompatible data type.
+.br
+Not enough arguments to satisfy the format specifiers in the format string.
+.SH SEE ALSO
+.BR printf (3), 
+.BR stdio (3), 
+.BR stdarg (3)
+.SH BUGS
+None known
+.SH COPYRIGHT
+Copyright (C) 2024 by Rungruj Thitichirathitikan and Khang Nguyen.
