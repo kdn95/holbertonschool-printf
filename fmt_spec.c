@@ -52,7 +52,7 @@ int print_integer(va_list list)
 
 	if (num < 0)
 	{
-		_writechar(-);
+		_writechar('-');
 		printed++;
 		num = -num;
 	}
