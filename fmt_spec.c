@@ -49,7 +49,6 @@ int print_integer(va_list list)
 int len;
 unsigned int num;
 int n = va_arg(list, int);
-int printed = 0;
 int divisor;
 divisor = 1;
 len = 0;
@@ -65,9 +64,8 @@ divisor *= 10;
 while (divisor != 0)
 {
 len += _writechar((num / divisor) + '0');
-printed++;
 num %= divisor;
 divisor /= 10;
 }
-return (printed);
+return (len);
 }
