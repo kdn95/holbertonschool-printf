@@ -69,5 +69,5 @@ int print_integer(va_list list)
 		num %= divisor;
 		divisor /= 10;
 	}
-	return printed;
+	return (printed);
 }
